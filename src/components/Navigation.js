@@ -55,7 +55,6 @@ export class Navigation extends Component {
 						Login
 					</Link>
 				</span>
-				<div className='search-results'></div>
 			</section>
 		)
 	}
