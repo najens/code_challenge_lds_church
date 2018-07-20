@@ -17,13 +17,20 @@ export function fetchTilesRequest() {
 /*
  * Fetch tiles success action
  *
- * @param {Object} tiles
+ * @param {Object} res
  * @return {Object}
  */
-export function fetchTilesSuccess(tiles) {
+export function fetchTilesSuccess(res) {
+	const tiles = res.data
+  const newTiles = {}
+  if (typeof tiles !== 'undefined') {
+    tiles.map((tile) => (
+      newTiles[tile.id] = tile
+    ))
+  }
 	return {
 		type: ACTIONS.FETCH_TILES_SUCCESS,
-		tiles: tiles.data,
+		tiles: newTiles,
 		message: 'Fetched tiles!',
 	}
 }

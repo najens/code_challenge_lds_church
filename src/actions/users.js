@@ -17,13 +17,20 @@ export function fetchUsersRequest() {
 /*
  * Fetch users success action
  *
- * @param {Object} users
+ * @param {Object} res
  * @return {Object}
  */
-export function fetchUsersSuccess(users) {
+export function fetchUsersSuccess(res) {
+	const users = res.data
+  const newUsers = {}
+  if (typeof users !== 'undefined') {
+    users.map((user) => (
+      newUsers[user.id] = user
+    ))
+  }
 	return {
 		type: ACTIONS.FETCH_USERS_SUCCESS,
-		users: users.data,
+		users: newUsers,
 		message: 'Fetched users!',
 	}
 }

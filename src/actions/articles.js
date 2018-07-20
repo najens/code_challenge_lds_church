@@ -17,13 +17,20 @@ export function fetchArticlesRequest() {
 /*
  * Fetch articles success action
  *
- * @param {Object} articles
+ * @param {Object} res
  * @return {Object}
  */
-export function fetchArticlesSuccess(articles) {
+export function fetchArticlesSuccess(res) {
+	const articles = res.data
+  const newArticles = {}
+  if (typeof articles !== 'undefined') {
+    articles.map((article) => (
+      newArticles[article.id] = article
+    ))
+  }
 	return {
 		type: ACTIONS.FETCH_ARTICLES_SUCCESS,
-		articles: articles.data,
+		articles: newArticles,
 		message: 'Fetched articles!',
 	}
 }
