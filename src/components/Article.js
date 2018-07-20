@@ -6,7 +6,7 @@ import { createUrlTitle } from '../utils/helpers'
 const Article = (props) => {
 	const { article } = props
 	const url_title = createUrlTitle(article.title)
-	const path = `article/${article.id}/${url_title}`
+	const path = `/code_challenge_lds_church/article/${article.id}/${url_title}`
 	return (
 		<Link className='article-container' to={path} id={article.id}>
 			<img className='article-img' src={article.images[0].url}/>

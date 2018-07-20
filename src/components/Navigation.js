@@ -28,7 +28,7 @@ export class Navigation extends Component {
 			<section className='nav-container'>
 				<span className='d-flex align-items-center'>
 					<Link
-						to='/'
+						to='/code_challenge_lds_church/'
 						exact='true'
 						className='nav-header'
 					>
@@ -47,7 +47,11 @@ export class Navigation extends Component {
 					/>
 				</div>
 				<span>
-					<Link to='/login' exact='true' className='nav-link'>
+					<Link
+						to='/code_challenge_lds_church/login'
+						exact='true'
+						className='nav-link'
+					>
 						Login
 					</Link>
 				</span>

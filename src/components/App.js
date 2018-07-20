@@ -24,14 +24,34 @@ export class App extends Component {
             {this.props.loading === true
               ? null
               : <Switch>
-                  <Route path='/' exact component={Dashboard} />
-                  <Route path='/login' component={Login} />
-                  <Route path='/article/:id/:title' component={ArticlePage} />
-                  <Route path='/article/add' component={ArticleForm} />
-                  <Route path='/article/:id/edit' component={ArticleForm} />
-                  <Route path='/tile/:id/:title' component={TilePage} />
-                  <Route path='/tile/add' component={TileForm} />
-                  <Route path='/tile/:id/edit' component={TileForm} />
+                  <Route
+                    path='/code_challenge_lds_church/' exact
+                    component={Dashboard}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/article/:id/:title'
+                    component={ArticlePage}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/article/add'
+                    component={ArticleForm}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/article/:id/edit'
+                    component={ArticleForm}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/tile/:id/:title'
+                    component={TilePage}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/tile/add'
+                    component={TileForm}
+                  />
+                  <Route
+                    path='/code_challenge_lds_church/tile/:id/edit'
+                    component={TileForm}
+                  />
                   <Route path='*' component={NotFound} />
                 </Switch>
             }
