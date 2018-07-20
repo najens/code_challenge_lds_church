@@ -2,6 +2,7 @@
   "name": "code_challenge_lds_church",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://najens.github.io/code_challenge_lds_church",
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -19,7 +20,8 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.4"
+    "enzyme-to-json": "^3.3.4",
+    "gh-pages": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
