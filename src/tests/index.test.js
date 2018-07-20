@@ -2,12 +2,13 @@ import React from 'react'
 import { render } from 'react-dom'
 import { App } from '../components/App'
 
-jest.mock('react-dom', ()=> ({render: jest.fn()}))
+jest.mock('react-dom', () => ({render: jest.fn()}))
 
 describe('rendering', () => {
 	let wrapper
+	const mockHandleInitialDataFn = jest.fn()
   beforeEach(() => {
-    wrapper = shallow(<App />)
+    wrapper = shallow(<App handleInitialData={mockHandleInitialDataFn} />)
   })
 	it('should render without crashing', () => {
 		const div = document.createElement('div')
