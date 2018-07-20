@@ -3,3 +3,282 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Commonly Used */
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.text-red {
+  color: #D50000;
+}
+
+/* Navigation Component */
+.nav-container {
+  background: #0D47A1;
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  justify-content:space-between;
+  display: flex;
+  align-items: center;
+}
+.home {
+  font-size: 2rem;
+  padding: 0 12px;
+}
+.search-icon {
+  font-size: 1rem;
+  padding-right: 6px;
+  color: #ddd;
+}
+.title {
+  margin: 0;
+}
+.nav-link {
+  padding: 0 10px;
+}
+.search {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+.input {
+  border: none;
+  outline: none;
+}
+.input:active {
+  border: none;
+}
+.search-results {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  width: 350px;
+  margin: auto;
+  height: auto;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 25;
+}
+/* Login Component */
+
+/* Dashboard Component */
+.container {
+  margin: 1rem 2rem;
+}
+.article-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+/* Article */
+.article-container {
+  position: relative;
+  width: 500px;
+  height: auto;
+}
+.article-img {
+  width: 100%;
+  height: auto;
+}
+.article-header {
+  position: absolute;
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 1.7rem;
+  bottom: 10px;
+  left: 10px;
+}
+/* Tile */
+.tile-container {
+  width: 100%;
+}
+.tile-header {
+  display: flex;
+  font-size: 1.8rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.tile-title {
+  align-self: center;
+}
+.tile-img {
+  height: 130px;
+  width: auto;
+  padding-right: 24px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+/* ArticlePage Component */
+.ap-main-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 75%;
+}
+.ap-img-container {
+  max-width: 100%;
+  height: auto;
+}
+.ap-img {
+  width: 100%;
+  height: auto;
+  max-height:
+}
+.ap-img-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.ap-caption-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+.ap-img-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.ap-video-caption {
+  margin: 0;
+}
+.ap-thumbnail-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.ap-thumbnail {
+  height: 4rem;
+  width: auto;
+  padding-left: 10px;
+}
+.article-body p {
+  width: 80%;
+}
+.article-body iframe {
+  float: right;
+  max-width: 100%;
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+.article-body h2 {
+  padding-top: 20px;
+}
+
+/* ArticleForm Component */
+
+/* TilePage Component */
+.tp-main-container {
+  margin: 4rem auto 2rem;
+  display: flex;
+  width: 80%;
+}
+.iframe-container {
+  margin-right: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+}
+.iframe-small {
+  width: 336px;
+  height: 189px;
+}
+.iframe-large {
+  width: 100%;
+  height: 600px;
+}
+.i-frame-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.tp-header-container {
+  margin-right: 2.5rem;
+}
+.tp-header {
+  margin: 0px;
+  color: blue;
+}
+.tp-title {
+  color: gray;
+  margin-top: 2px;
+}
+.tp-description {
+
+}
+/* TileForm Component */
+
+/* NotFound Component */
+.not-found-container {
+  margin-top: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/*** Media queries ***/
+
+@media screen and (min-width: 20em) {
+  html {
+    font-size: calc(100vw * 0.02058824 + 3.41176471px);
+  }
+  .article-body iframe {
+    width: 224px;
+    height: 126px;
+  }
+  .tile-img {
+    height: 80px;
+  }
+  .iframe-large {
+    height: 180px;
+  }
+  .iframe-small {
+    width: 112px;
+    height: 63px;
+  }
+}
+@media screen and (min-width: 38.214em) {
+  html {
+    font-size: 1em;
+  }
+  .article-body iframe {
+    width: 336px;
+    height: 189px;
+  }
+  .article-img {
+    min-height: 372px;
+  }
+  .article-list {
+    flex-wrap: nowrap;
+  }
+  .tile-img {
+    height: 130px;
+  }
+  .iframe-large {
+    height: 600px;
+  }
+  .iframe-small {
+    width: 336px;
+    height: 189px;
+  }
+}
