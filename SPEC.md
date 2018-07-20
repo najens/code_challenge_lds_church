@@ -19,8 +19,8 @@
 - The app contains a navigation bar that is visible on all pages.
 	- If the user is logged in, their name appears in the navigation bar.
 - The articles and tiles are both accessible from the home page.
-- Articles are available at `articles/:article-title`.
-- Tiles are available at `tiles/:tile-title`.
+- Articles are available at `articles/:id/:article-title`.
+- Tiles are available at `tiles/:id/:tile-title`.
 - The user can navigate to an article or tile and back to the home page without typing the address into the address bar.
 - The user can search for and navigate to all articles and tiles from a search bar on the home page.
 	- As the user types into the search field, books that match the query are displayed on the page.
